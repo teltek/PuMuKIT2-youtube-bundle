@@ -125,7 +125,7 @@ pumukit_youtube:
     default_track_upload: 'youtube'
 ```
 
-If this parameter is not configured, the track by default is the track with the tag youtube. 
+If this parameter is not configured, the track by default is the track with the tag youtube.
 
 
 ### Clear cache
@@ -151,6 +151,7 @@ The recommendation on a production environment is to run commands every day, e.g
 40 23 * * *     /usr/bin/php /var/www/pumukit2/app/console youtube:update:metadata --env=prod
 40 23 * * *     /usr/bin/php /var/www/pumukit2/app/console youtube:update:playlist --env=prod
 40 23 * * *     /usr/bin/php /var/www/pumukit2/app/console youtube:update:status --env=prod
+20  * * * *     /usr/bin/php /var/www/pumukit2/app/console youtube:update:pendingstatus --env=prod
 40 23 * * *     /usr/bin/php /var/www/pumukit2/app/console youtube:upload --env=prod
 40 23 * * *     /usr/bin/php /var/www/pumukit2/app/console youtube:delete --env=prod
 ```
